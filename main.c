@@ -116,6 +116,20 @@ int DeletaAresta(Grafo* mapa, int origem, int destino, int digrafo)
     return 1;
 }
 
+void MostraGrafo(Grafo *mapa)
+{
+    if (mapa != NULL)
+    {
+        for (int i = 0; i < mapa->n_nohs; i++)
+        {
+            for (int j = 0; j < mapa->grau[i]; j++)
+            {
+                printf("\n \n Vertice: %d \n Conexoes: \t\t %d \n Distancia: \t\t\t\t %.2f \n", i, mapa->nohs[i][j], mapa->tamanho[i][j]);
+            }
+            
+        }
+    }
+}
 
 int main(int argc, const char * argv[])
 {
